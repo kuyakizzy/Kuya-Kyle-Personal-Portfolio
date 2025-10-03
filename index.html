@@ -1,83 +1,42 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 <html lang="en">
 <head>
-     <link href="assets/normalize.css" rel="stylesheet">
-     <style>    
-        header {
-            text-align: center;
-            background: url("assets/images/horizontal.JPEG");
-            background-size: cover;
-            color: white;
-            
-        }
-        a {
-            color: white;
-        }
-        h1 {
-            font-size: 70px;
-        }
-        img {
-            margin: 40px 0px 0px 0px;
-            height: 200px;
-            border: 7px white solid;
-            border-radius: 20%;
-        }
-        ul {
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.5);
-            opacity: 0.95;
-        }
-        li {
-            display: inline;
-            padding: 0px 10px 0px 10px;
-        }
-        article {
-            max-width: 500px;
-            padding: 20px;
-            margin:0 auto
-        }
-        @media (max-width: 500px) {
-            h1 {
-                font-size: 36px;
-            }
-            li{
-                display: block;
-                padding: 5px;
-      }
-        }
-     </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Protected Page</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    #protectedContent { display: none; }
+    #error { color: red; margin-top: 10px; }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="/assets/images/pfp.JPEG">
-        <h1>Kyle's Blog</h1>
+  <h2>Enter Password to Access Portfolio</h2>
+  <input type="password" id="passwordInput" placeholder="Enter password" />
+  <button onclick="checkPassword()">Submit</button>
+  <div id="error"></div>
 
-        <ul>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Best Lifts</a></li>
-            <li><a href="#">Learning From my Mistakes</a></li>
-        </ul>
+  <div id="protectedContent">
+    <h1>Welcome to the Full Page!</h1>
+    <p>This Portfolio is under Construction! V1 Rollout: January 1st 2026 </p>
+  </div>
 
-    </header>
-        <article>
-            <h2>VHS umami pop-up trust fund</h2>
-                <p>Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan gentrify Echo Park. Street art swag brunch, next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them polaroid hashtag +1, meggings biodiesel Portland High Life cray tumblr retro.</p>
-            <button>Like</button>
-        </article>
-        <article>
-             <h2>Sartorial synth Echo Park, roof party</h2>
-                <p>chambray you probably haven't heard of them pour-over viral selvage umami skateboard VHS post-ironic selfies. Wes Anderson gentrify fanny pack twee, bicycle rights bitters blog keffiyeh plaid flannel. Tonx irony cliche sustainable mlkshk bitters. Four loko leggings chambray Vice.</p>
-            <button>Like</button>
-        </article>
-        <article>
-            <h2>Forage food truck keytar master cleanse</h2>
-                <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic tacky sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>
-        <button>Like</button>
-        </article>
-    <script>
-        $("button").on("click",function(){ alert("clicked!") })
-    </script>
+  <script>
+    const correctPassword = "password"; // Change this to your actual password
 
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const error = document.getElementById("error");
+      const content = document.getElementById("protectedContent");
+
+      if (input === correctPassword) {
+        content.style.display = "block";
+        error.textContent = "";
+      } else {
+        error.textContent = "Wrong password. Try again.";
+        content.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
