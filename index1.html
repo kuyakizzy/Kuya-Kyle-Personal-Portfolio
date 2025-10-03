@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Protected Page</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    #protectedContent { display: none; }
+    #error { color: red; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Enter Password to Access</h2>
+  <input type="password" id="passwordInput" placeholder="Enter password" />
+  <button onclick="checkPassword()">Submit</button>
+  <div id="error"></div>
+
+  <div id="protectedContent">
+    <h1>Welcome!</h1>
+    <p>This Portfolio is currently under heavy Construction! V1 Rollout: January 1st 2026 </p>
+    <p>In the meantime, here's some music to keep you busy 🙂</p>
+    <ul>
+       <h3>Music:</h3>
+        <li><a href="https://music.apple.com/us/playlist/shuffle-me/pl.u-d2b00DLTL3yaPoY" target="blank">Click Me</a></li>
+    </ul>
+    <section id="tools" style="margin-top: 2rem;">
+  <h2>Workflow Tools</h2>
+  <p>Explore my live automation and reporting tools designed for real-world usability and mobile access.</p>
+  <ul>
+    <li><a href="https://tools.kuyakyle.com" target="_blank">Alarm Report Generator</a></li>
+    <!-- Add more tools here as you deploy them -->
+  </ul>
+</section>
+  </div>
+
+  <script>
+    const correctPassword = "password"; // Change this to your actual password
+
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const error = document.getElementById("error");
+      const content = document.getElementById("protectedContent");
+
+      if (input === correctPassword) {
+        content.style.display = "block";
+        error.textContent = "";
+      } else {
+        error.textContent = "Wrong password. Try again.";
+        content.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
