@@ -1,55 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Protected Page</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; padding: 50px; }
-    #protectedContent { display: none; }
-    #error { color: red; margin-top: 10px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kuyakyle.com</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h2>Enter Password to Access</h2>
-  <input type="password" id="passwordInput" placeholder="Enter password" />
-  <button onclick="checkPassword()">Submit</button>
-  <div id="error"></div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">kuyakyle.com</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#apps">Apps</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-  <div id="protectedContent">
-    <h1>Welcome!</h1>
-    <p>This Portfolio is currently under heavy Construction! V1 Rollout: January 1st 2026 </p>
-    <p>In the meantime, here's some music to keep you busy 🙂</p>
-    <ul>
-       <h3>Music:</h3>
-        <li><a href="https://music.apple.com/us/playlist/shuffle-me/pl.u-d2b00DLTL3yaPoY" target="blank">Click Me</a></li>
-    </ul>
-    <section id="tools" style="margin-top: 2rem;">
-  <h2>Workflow Tools</h2>
-  <p>Explore my live automation and reporting tools designed for real-world usability and mobile access.</p>
-  <ul>
-    <li><a href="https://tools.kuyakyle.com" target="_blank">Alarm Report Generator</a></li>
-    <!-- Add more tools here as you deploy them -->
-  </ul>
-</section>
-  </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Kyle Kagaoan</h1>
+            <p>I'm not just upgrading systems, I'm upgrading myself...</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    const correctPassword = "password"; // Change this to your actual password
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <img src="assets/Profile.JPEG" alt="Profile" class="profile-img">
+            <div class="about-text">
+                <h3>👋 Nice to meet you!</h3>
+                <p>I’ve always been drawn to understanding how things work — whether it’s a desktop setup, a piece of code, or my own potential. My journey in IT has taught me that progress isn’t just about upgrading systems; it’s about upgrading myself along the way.</p>
+                <p>From providing hands-on desktop support to exploring side projects and personal development, I bring curiosity, consistency, and a drive to improve to everything I do. Whether I’m troubleshooting devices or chasing a new PR in the gym, my goal is the same: keep learning, keep building, and keep growing stronger — in every sense.</p>
+            </div>
 
-    function checkPassword() {
-      const input = document.getElementById("passwordInput").value;
-      const error = document.getElementById("error");
-      const content = document.getElementById("protectedContent");
+            <div class="edu-exp-column">
+                <h3>🎓 Education</h3>
+                <p><strong>Bachelor's in Computer Science</strong><br>University Name | 2018 - 2022</p>
+            </div>
 
-      if (input === correctPassword) {
-        content.style.display = "block";
-        error.textContent = "";
-      } else {
-        error.textContent = "Wrong password. Try again.";
-        content.style.display = "none";
-      }
-    }
-  </script>
+            <div class="edu-exp-column">
+                <h3>🎓 Experience</h3>
+                <p><strong>Bachelor's in Computer Science</strong><br>University Name | 2018 - 2022</p>
+            </div>
+        </div>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Frontend</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Vue.js</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Backend</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Tools & Other</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">🚀</div>
+                <div class="project-content">
+                    <h3>Project One</h3>
+                    <p>A modern web application built with React and Node.js featuring real-time data synchronization.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#">Live Demo →</a>
+                        <a href="#">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">💻</div>
+                <div class="project-content">
+                    <h3>Project Two</h3>
+                    <p>An e-commerce platform with advanced filtering and payment integration.</p>
+                    <div class="project-tags">
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">Stripe</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#">Live Demo →</a>
+                        <a href="#">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">🎨</div>
+                <div class="project-content">
+                    <h3>Project Three</h3>
+                    <p>A creative portfolio template with smooth animations and interactive elements.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">GSAP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#">Live Demo →</a>
+                        <a href="#">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section id="apps">
+        <h2 class="section-title">My Applications</h2>
+        <div class="apps-grid">
+            <div class="app-card">
+                <div class="app-icon">📱</div>
+                <h3>Task Manager Pro</h3>
+                <p>A productivity app with smart scheduling and team collaboration features.</p>
+                <div class="project-tags" style="justify-content: center; margin-top: 1rem;">
+                    <span class="tag">React Native</span>
+                    <span class="tag">Firebase</span>
+                </div>
+                <a href="#" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Try It Out</a>
+            </div>
+            
+            <div class="app-card">
+                <div class="app-icon">🎵</div>
+                <h3>Music Studio</h3>
+                <p>An audio editing and mixing application for creators and musicians.</p>
+                <div class="project-tags" style="justify-content: center; margin-top: 1rem;">
+                    <span class="tag">Electron</span>
+                    <span class="tag">Web Audio API</span>
+                </div>
+                <a href="#" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Download</a>
+            </div>
+            
+            <div class="app-card">
+                <div class="app-icon">📊</div>
+                <h3>Data Visualizer</h3>
+                <p>Transform complex datasets into beautiful, interactive visualizations.</p>
+                <div class="project-tags" style="justify-content: center; margin-top: 1rem;">
+                    <span class="tag">D3.js</span>
+                    <span class="tag">Python</span>
+                </div>
+                <a href="#" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+        <h2 class="section-title">Hobbies & Interests</h2>
+        <div class="hobbies-grid">
+            <div class="hobby-card">
+                <div class="hobby-icon">📷</div>
+                <h3>Photography</h3>
+                <p>Capturing moments and exploring the world through my lens.</p>
+            </div>
+            
+            <div class="hobby-card">
+                <div class="hobby-icon">🎮</div>
+                <h3>Gaming</h3>
+                <p>Love indie games and occasionally participate in game jams.</p>
+            </div>
+            
+            <div class="hobby-card">
+                <div class="hobby-icon">✈️</div>
+                <h3>Travel</h3>
+                <p>Exploring new cultures and experiencing different perspectives.</p>
+            </div>
+            
+            <div class="hobby-card">
+                <div class="hobby-icon">📚</div>
+                <h3>Reading</h3>
+                <p>Tech blogs, sci-fi novels, and everything in between.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <form class="contact-form" id="contactForm">
+
+                <!--Google Form Embed-->
+                <div style="width: 100%; max-width: 800px; margin-left: auto; margin-right: auto;">
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfMrLYoWU1HHqt4KbS_krLkQPwtNT9viJwN_e7dEsMsdzP4Iw/viewform?embedded=true" width="600" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+            
+            <div class="social-links">
+                <a href="#" title="GitHub">github</a>
+                <a href="#" title="LinkedIn">LinkedIn</a>
+                <a href="#" title="Twitter">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Kyle Kagaoan. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
