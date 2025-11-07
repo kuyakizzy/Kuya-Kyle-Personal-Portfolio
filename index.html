@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kuyakyle.com</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">kuyakyle.com</div>
+            <div class="logo"><a href="#home">kuyakyle.com</a></div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#apps">Apps</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#hobbies">Hobbies</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -29,217 +33,147 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Kyle Kagaoan</h1>
-            <p>I'm not just upgrading systems, I'm upgrading myself...</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
+        <div>
+            <img src="assets/profile.png" alt="My profile picture" class="profile-pic">
+            
+            <h1>Hey there, I'm Kuya Kyle 👋</h1>
+            <p>(As of Monday, October 20th, 2025, this website is still in its early stages of developement but is essential to sharing my personal journey in tech!)</p>
+            <p>kuyakyle.com V1 anticipated completion and roll out date:</p>
+            <p>1/1/2026</p>
+                
+            <p> </p>
+            <h3>Technology evolves every day — and so do I! Here's how...</h3>
+            <p> </p>
+            <a href="#about" class="btn">Learn More</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <img src="assets/Profile.JPEG" alt="Profile" class="profile-img">
-            <div class="about-text">
-                <h3>👋 Nice to meet you!</h3>
-                <p>I’ve always been drawn to understanding how things work — whether it’s a desktop setup, a piece of code, or my own potential. My journey in IT has taught me that progress isn’t just about upgrading systems; it’s about upgrading myself along the way.</p>
-                <p>From providing hands-on desktop support to exploring side projects and personal development, I bring curiosity, consistency, and a drive to improve to everything I do. Whether I’m troubleshooting devices or chasing a new PR in the gym, my goal is the same: keep learning, keep building, and keep growing stronger — in every sense.</p>
+        <h2>About Me</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>What does the name mean?</h3>
+                <p>"Kuya" means "older brother" in Filipino — a symbol of guidance and care. 
+                    It began with my siblings and now represents how I strive to support and uplift others!</p>
             </div>
 
-            <div class="edu-exp-column">
-                <h3>🎓 Education</h3>
-                <p><strong>Bachelor's in Computer Science</strong><br>University Name | 2018 - 2022</p>
-            </div>
-
-            <div class="edu-exp-column">
-                <h3>🎓 Experience</h3>
-                <p><strong>Bachelor's in Computer Science</strong><br>University Name | 2018 - 2022</p>
+            <div class="card">
+                <h3>What drives me?</h3>
+                <p>Curiosity fuels everything I do — I'm always learning, improving, and finding new ways to help others grow. 
+                Think of me as a Swiss Army knife: versatile, reliable, and built to take on whatever challenge comes next.</p>
             </div>
         </div>
-        
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h4>Frontend</h4>
-                <div class="skill-tags">
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Vue.js</span>
-                </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>IT Support Technician</h3>
+                <p>ICP Corp | 10/2025 - Present</p>
             </div>
-            <div class="skill-category">
-                <h4>Backend</h4>
-                <div class="skill-tags">
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                </div>
+
+            <div class="card">
+                <h3>Field Operations Technician</h3>
+                <p>SALK Group | 6/2024 - 11/2025</p>
             </div>
-            <div class="skill-category">
-                <h4>Tools & Other</h4>
-                <div class="skill-tags">
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Figma</span>
-                </div>
+
+            <div class="card">
+                <h3>IT Analyst Intern</h3>
+                <p>Richmond University Medical Center | 8/2025 - 11/2025</p>
+            </div>
+
+            <div class="card">
+                <h3>IT Help Desk</h3>
+                <p>St. John's University | 10/2021 - 1/2024</p>
+            </div>
+            
+            <div class="card">
+                <h3>Technology Services Group Intern</h3>
+                <p>Jennison Associates LLC | 6/2023 - 8/2023</p>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2 class="section-title">Recent Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-img">🚀</div>
-                <div class="project-content">
-                    <h3>Project One</h3>
-                    <p>A modern web application built with React and Node.js featuring real-time data synchronization.</p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#">Live Demo →</a>
-                        <a href="#">GitHub →</a>
-                    </div>
-                </div>
+        <h2>Projects</h2>
+        <p>During my free time, I enjoy working on personal projects to sharpen my skills and explore new technologies. Here are a few I'm currently working on:</p>
+        <h2></h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Richmond University Medical Center Volunteer</h3>
+                <p>In Progress</p>
             </div>
-            
-            <div class="project-card">
-                <div class="project-img">💻</div>
-                <div class="project-content">
-                    <h3>Project Two</h3>
-                    <p>An e-commerce platform with advanced filtering and payment integration.</p>
-                    <div class="project-tags">
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">Express</span>
-                        <span class="tag">Stripe</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#">Live Demo →</a>
-                        <a href="#">GitHub →</a>
-                    </div>
-                </div>
+            <div class="card">
+                <h3>Virtual SOC Lab with SIEM</h3>
+                <p>In Progress</p>
             </div>
-            
-            <div class="project-card">
-                <div class="project-img">🎨</div>
-                <div class="project-content">
-                    <h3>Project Three</h3>
-                    <p>A creative portfolio template with smooth animations and interactive elements.</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">GSAP</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#">Live Demo →</a>
-                        <a href="#">GitHub →</a>
-                    </div>
-                </div>
+            <div class="card">
+                <h3>Threat Intelligence Feed</h3>
+                <p>In Progress</p>
+            </div>
+            <div class="card">
+                <h3>Home Lab for Learning Purposes</h3>
+                <p>In Progress</p>
             </div>
         </div>
     </section>
 
-    <!-- Applications Section -->
-    <section id="apps">
-        <h2 class="section-title">My Applications</h2>
-        <div class="apps-grid">
-            <div class="app-card">
-                <div class="app-icon">📱</div>
-                <h3>Task Manager Pro</h3>
-                <p>A productivity app with smart scheduling and team collaboration features.</p>
-                <div class="project-tags" style="justify-content: center; margin-top: 1rem;">
-                    <span class="tag">React Native</span>
-                    <span class="tag">Firebase</span>
-                </div>
-                <a href="#" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Try It Out</a>
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Bachelor of Computer Science</h3>
+                <p>St. John's University | 8/2020 - 12/2023</p>
+                <p>Summa Cum Laude, Dean's List, Vice President of Motor Enthusiasts Org., Senior Senator, Junior Senator, National Society of Leadership and Success</p>
             </div>
-            
-            <div class="app-card">
-                <div class="app-icon">🎵</div>
-                <h3>Music Studio</h3>
-                <p>An audio editing and mixing application for creators and musicians.</p>
-                <div class="project-tags" style="justify-content: center; margin-top: 1rem;">
-                    <span class="tag">Electron</span>
-                    <span class="tag">Web Audio API</span>
-                </div>
-                <a href="#" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Download</a>
+            <div class="card">
+                <h3>Certifications</h3>
+                <p>Comptia A+, Google IT Support</p>
             </div>
-            
-            <div class="app-card">
-                <div class="app-icon">📊</div>
-                <h3>Data Visualizer</h3>
-                <p>Transform complex datasets into beautiful, interactive visualizations.</p>
-                <div class="project-tags" style="justify-content: center; margin-top: 1rem;">
-                    <span class="tag">D3.js</span>
-                    <span class="tag">Python</span>
-                </div>
-                <a href="#" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Learn More</a>
+            <div class="card">
+                <h3>TRYHACKME</h3>
+                <p>Continous learning for cybersecurity skills</p>
             </div>
         </div>
     </section>
 
     <!-- Hobbies Section -->
     <section id="hobbies">
-        <h2 class="section-title">Hobbies & Interests</h2>
-        <div class="hobbies-grid">
-            <div class="hobby-card">
-                <div class="hobby-icon">📷</div>
-                <h3>Photography</h3>
-                <p>Capturing moments and exploring the world through my lens.</p>
+        <h2>Side Quests</h2>
+        <p>For when my mind needs a break from tech, I dive into hobbies that keep me balanced and energized. Here are a few of my favorite side quests:</p>
+        <h2></h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Powerlifting Coach</h3>
+                <p></p>
             </div>
-            
-            <div class="hobby-card">
-                <div class="hobby-icon">🎮</div>
-                <h3>Gaming</h3>
-                <p>Love indie games and occasionally participate in game jams.</p>
+            <div class="card">
+                <h3>Backyard Mechanic</h3>
+                <p></p>
             </div>
-            
-            <div class="hobby-card">
-                <div class="hobby-icon">✈️</div>
-                <h3>Travel</h3>
-                <p>Exploring new cultures and experiencing different perspectives.</p>
-            </div>
-            
-            <div class="hobby-card">
-                <div class="hobby-icon">📚</div>
-                <h3>Reading</h3>
-                <p>Tech blogs, sci-fi novels, and everything in between.</p>
+            <div class="card">
+                <h3>Marathon Prep for 2026</h3>
+                <p></p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-            <form class="contact-form" id="contactForm">
-
-                <!--Google Form Embed-->
-                <div style="width: 100%; max-width: 800px; margin-left: auto; margin-right: auto;">
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfMrLYoWU1HHqt4KbS_krLkQPwtNT9viJwN_e7dEsMsdzP4Iw/viewform?embedded=true" width="600" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                </div>
-            
-            <div class="social-links">
-                <a href="#" title="GitHub">github</a>
-                <a href="#" title="LinkedIn">LinkedIn</a>
-                <a href="#" title="Twitter">Email</a>
-            </div>
+        <h2>Contact</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfMrLYoWU1HHqt4KbS_krLkQPwtNT9viJwN_e7dEsMsdzP4Iw/viewform?embedded=true" width="100%" height="1500" frameborder="0">Loading…</iframe>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Kyle Kagaoan. All rights reserved.</p>
+        <p>&copy; 2025 | kuyakyle.com V0 by Kyle Kagaoan | All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
